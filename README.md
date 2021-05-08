@@ -1,1 +1,38 @@
 # CLI-Messenger
+
+A CLI based chat application written in Go.
+It allows communication between a pair of users intending to communicate with each other.
+Multiple pair of users can communicate simultaneously.
+
+Server:
+==============================
+
+#go run server.go
+Starting tcp server on localhost:8081
+
+
+User 1:
+==============================
+#go run client.go
+Enter your name: a
+Whom do you want to talk to? b
+waiting till the user comes online. Press Ctrl + C to exit.
+======================= Conversation =======================
+					Hello
+Hello
+					How are you?
+Hey
+^Csignal: interrupt
+
+
+User 2:
+==============================
+#go run client.go
+Enter your name: b
+Whom do you want to talk to? a
+======================= Conversation =======================
+Hello
+					Hello
+How are you?
+					Hey
+Unable to reach server. Timed out :(
